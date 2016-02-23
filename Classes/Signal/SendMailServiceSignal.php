@@ -29,6 +29,8 @@ class SendMailServiceSignal
             if (empty($message->getReplyTo())) {
                 $message->setReplyTo($message->getFrom());
                 $message->setFrom($this->getConfiguredFromSettings($settings));
+            } else {
+                $this->log('Moving of From => ReplyTo is disabled. Reply-To already set, check if <type>.overwrite.replyToEmail is set.');
             }
         }
     }
@@ -45,5 +47,19 @@ class SendMailServiceSignal
         $name = ($from['name']) ? $from['name'] : ConfigurationUtility::getDefaultMailFromName();
         $email = ($from['email']) ? $from['email'] : ConfigurationUtility::getDefaultMailFromAddress();
         return array($email => $name);
+    }
+
+    /**
+     * Log message in Default Log Manager
+     *
+     * @param string $message
+     * @param array $data
+     * @param int $severity
+     */
+    protected function log($message, array $data = array(), $severity = \TYPO3\CMS\Core\Log\LogLevel::NOTICE)
+    {
+        /** @var $logger \TYPO3\CMS\Core\Log\Logger */
+        $logger = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\CMS\Core\Log\LogManager')->getLogger(__CLASS__);
+        $logger->log($severity, $message, $data);
     }
 }
