@@ -10,8 +10,8 @@ In constants:
     plugin.tx_powermail.settings.moveFromToReplyTo {
         enabled = 1
         from {
-            name = EGS3H Auto-Mailer
-            email = no_reply@egs3h.eur.nl
+            name = Serfhos Auto-Mailer
+            email = no_reply@serfhos.nl
         }
     }
 
