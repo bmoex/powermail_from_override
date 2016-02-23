@@ -30,7 +30,7 @@ class SendMailServiceSignal
                 $message->setReplyTo($message->getFrom());
                 $message->setFrom($this->getConfiguredFromSettings($settings));
             } else {
-                $this->log('Moving of From => ReplyTo is disabled. Reply-To already set, check if <type>.overwrite.replyToEmail is set.');
+                $this->log('Moving of From => ReplyTo is disabled. Reply-To already set, check if <type>.overwrite.replyToEmail is set.', $message->getReplyTo());
             }
         }
     }
