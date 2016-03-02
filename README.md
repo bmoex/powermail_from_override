@@ -4,6 +4,11 @@
   * TER: http://typo3.org/extensions/repository/view/powermail_from_override
 
 
+Since the upcoming Sender Policy Framework, SPF, the mails are easily placed into the spam folder of the receiver. Therefor you can force the <from:> sender to make sure the mail
+can be send from the invoked server.
+
+For more information check: https://en.wikipedia.org/wiki/Sender_Policy_Framework
+
 # Usage
 In constants:
 

@@ -1,0 +1,14 @@
+plugin.tx_powermail.settings {
+    moveFromToReplyTo {
+        # cat=powermail_spam//0285; type=boolean; label= Enable static <from> and dynamic default <mailto>
+        enabled = 0
+
+        from {
+            # cat=powermail_spam//0286; type=text; label= Sender Name for mail to sender overwrites default <from> (e.g. From Name)
+            name =
+
+            # cat=powermail_spam//0286; type=text; label= Sender Email for mail to sender overwrites default <from> (e.g. from@mail.com)
+            email =
+        }
+    }
+}

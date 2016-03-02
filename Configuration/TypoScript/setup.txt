@@ -1,0 +1,9 @@
+plugin.tx_powermail {
+    settings.setup.moveFromToReplyTo {
+        enabled = {$plugin.tx_powermail.settings.moveFromToReplyTo.enabled}
+        from {
+            name = {$plugin.tx_powermail.settings.moveFromToReplyTo.from.name}
+            email = {$plugin.tx_powermail.settings.moveFromToReplyTo.from.email}
+        }
+    }
+}
