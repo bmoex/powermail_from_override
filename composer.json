@@ -9,7 +9,8 @@
         "Serfhos",
         "Benjamin Serfhos",
         "Extbase",
-        "Redirects"
+        "SPF",
+        "Sender Policy Framework"
     ],
     "homepage": "https://github.com/bmoex/powermail_from_override",
     "license": "LGPL-3.0+",
