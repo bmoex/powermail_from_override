@@ -6,8 +6,8 @@
 .. include:: ../Includes.txt
 .. index:: Configuration
 
-Screenshots
-===========
+Configuration
+=============
 
 .. only:: html
 
