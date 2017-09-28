@@ -12,6 +12,10 @@
         "SPF",
         "Sender Policy Framework"
     ],
+    "require": {
+        "typo3/cms": ">=7.6.0 <9.0.0",
+        "typo3-ter/powermail": ">=2.6.0 <4.99.99"
+    },
     "homepage": "https://github.com/bmoex/powermail_from_override",
     "license": "LGPL-3.0+",
     "autoload": {
