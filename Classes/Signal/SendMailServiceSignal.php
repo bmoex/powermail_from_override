@@ -1,7 +1,7 @@
 <?php
 namespace Serfhos\PowermailFromOverride\Signal;
 
-use In2code\Powermail\Domain\Model\Mail;
+use In2code\Powermail\Domain\Service\Mail\SendMailService;
 use In2code\Powermail\Utility\ConfigurationUtility;
 use TYPO3\CMS\Core\Mail\MailMessage;
 
@@ -18,15 +18,14 @@ class SendMailServiceSignal
      *
      * @param MailMessage $message
      * @param array $email
-     * @param Mail $mail
-     * @param array $settings
-     * @param string $type
+     * @param SendMailService $sendMailService
      * @return void
      */
-    public function beforeSend(MailMessage $message, array $email, Mail $mail, array $settings, $type)
+    public function beforeSend(MailMessage $message, array $email, SendMailService $sendMailService)
     {
+        $settings = $sendMailService->getSettings();
         if ((bool) $settings['moveFromToReplyTo']['enabled'] === true) {
-            if (empty($message->getReplyTo())) {
+            if (empty($message->getReplyTo()) || $message->getReplyTo() === $message->getFrom()) {
                 $message->setReplyTo($message->getFrom());
                 $message->setFrom($this->getConfiguredFromSettings($settings));
             } else {

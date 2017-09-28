@@ -4,7 +4,7 @@ $EM_CONF[$_EXTKEY] = [
     'title' => 'Powermail: Static From in Mails',
     'description' => 'Use reply-to as default from address, set static value when configured',
     'category' => 'module',
-    'version' => '1.0.1',
+    'version' => '1.1.0',
     'state' => 'stable',
     'uploadFolder' => false,
     'clearCacheOnLoad' => true,
@@ -15,7 +15,7 @@ $EM_CONF[$_EXTKEY] = [
     'constraints' => [
         'depends' => [
             'typo3' => '6.2.0-8.7.99',
-            'powermail' => '2.6.0-4.99.99',
+            'powermail' => '4.0.0-4.99.99',
         ],
         'conflicts' => [],
         'suggests' => [],
