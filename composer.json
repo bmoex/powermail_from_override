@@ -14,8 +14,6 @@
     ],
     "homepage": "https://github.com/bmoex/powermail_from_override",
     "license": "LGPL-3.0+",
-
-    "version": "1.0.0",
     "autoload": {
         "psr-4": {
             "Serfhos\\PowermailFromOverride\\": "Classes/"
